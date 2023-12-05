@@ -1,2 +1,6 @@
 a = 5
-print(a ** 2)
+b = 10
+if a > b:
+    print(a ** 2)
+else:
+    print(b ** 2)
