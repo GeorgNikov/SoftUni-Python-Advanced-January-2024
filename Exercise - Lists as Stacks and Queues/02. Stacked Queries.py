@@ -11,9 +11,9 @@ for _ in range(n):
         number = int(token[0])
         if number == 2 and stack:
             stack.pop()
-        elif number == 3:
+        elif number == 3 and stack:
             print(max(stack))
-        elif number == 4:
+        elif number == 4 and stack:
             print(min(stack))
 
 if stack:
