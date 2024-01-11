@@ -19,20 +19,3 @@ while pumps_data_copy:
         tank = 0
 
 print(index)
-
-# Solution 1 - Not working
-
-# petrol_pumps = int(input())
-# tank = 0
-# start_point = 0
-#
-# for i in range(petrol_pumps):
-#     data = input().split()
-#     amount, distance = data
-#     if int(amount) + tank > int(distance):
-#         tank += int(amount)
-#         tank -= int(distance)
-#     else:
-#         start_point = i + 1
-#
-# print(start_point)
