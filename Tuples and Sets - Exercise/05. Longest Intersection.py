@@ -8,6 +8,7 @@ for _ in range(n):
     third, fourth = b.split(',')
     first_intersection = set()
     second_intersection = set()
+
     for i in range(int(first), int(second) + 1):
         first_intersection.add(i)
     for i2 in range(int(third), int(fourth) + 1):
