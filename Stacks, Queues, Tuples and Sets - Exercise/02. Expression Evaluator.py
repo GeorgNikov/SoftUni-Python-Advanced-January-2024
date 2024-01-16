@@ -3,20 +3,16 @@ import functools
 
 def calculate(nums, operator):
     if operator == '-':
-        result = functools.reduce(lambda a, b: a - b, nums)
-        return result
+        return functools.reduce(lambda a, b: a - b, nums)
     elif operator == '+':
-        result = functools.reduce(lambda a, b: a + b, nums)
-        return result
+        return functools.reduce(lambda a, b: a + b, nums)
     elif operator == '*':
-        result = functools.reduce(lambda a, b: a * b, nums)
-        return result
+        return functools.reduce(lambda a, b: a * b, nums)
     elif operator == '/':
-        result = functools.reduce(lambda a, b: a / b, nums)
-        return int(result)
+        return int(functools.reduce(lambda a, b: a / b, nums))
 
 
-expression = [x for x in input().split()]
+expression = input().split()
 operators = '+-*/'
 
 current_numbers = []

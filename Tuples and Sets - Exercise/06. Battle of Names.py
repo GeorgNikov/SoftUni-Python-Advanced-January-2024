@@ -4,7 +4,7 @@ names_even = set()
 names_odd = set()
 
 for i in range(1, n+1):
-    name = int(sum(ord(char) for char in input()) / i)
+    name = sum(ord(char) for char in input()) // i
     if name % 2 == 0:
         names_even.add(name)
     else:
