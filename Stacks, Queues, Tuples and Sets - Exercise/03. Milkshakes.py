@@ -41,3 +41,5 @@ if milk:
     print(f"Milk: {', '.join(map(str, milk))}", sep=', ')
 else:
     print('Milk: empty')
+
+# print(f"Chocolate: {', '.join(str(x) for x in
