@@ -1,7 +1,7 @@
 row, col = [int(el) for el in input().split()]
 
 matrix = []
-sub_matrix = []
+sub_matrix = {}
 counter = 0
 
 for _ in range(row):

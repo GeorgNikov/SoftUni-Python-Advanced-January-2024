@@ -5,7 +5,7 @@ matrix = []
 for _ in range(row):
     matrix.append([int(el) for el in input().split()])
 
-sum_of_diagonals = [[],[]]
+sum_of_diagonals = [[], []]
 
 for row_index in range(row):
     current_element = matrix[row_index][row_index]
@@ -13,7 +13,6 @@ for row_index in range(row):
 
 cnt = len(sum_of_diagonals[0]) - 1
 for row_index in range(row):
-
     current_element = matrix[row_index][cnt]
     sum_of_diagonals[1].append(current_element)
     cnt -= 1
