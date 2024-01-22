@@ -14,6 +14,28 @@ def bunny_position():
     return position
 
 
+def valid_path(bunny_position):
+    paths = dict()
+    moves = dict()
+    r, c = bunny_position[0], bunny_position[1]
+    for path in directions:
+        new_row, new_col = r + path[0], c + path[1]
+        while True:
+            if not check_indices_valid((new_row, new_col), rows, cols) or matrix[new_row][new_col] == 'X':
+                break
+
+            if check_indices_valid((new_row, new_col), rows, cols):
+                k = directions[(path[0], path[1])]
+                if k not in paths:
+                    paths[k] = []
+                    moves[k] = 0
+                paths[k].append([new_row, new_col])
+                moves[k] += int(matrix[new_row][new_col])
+            new_row, new_col = new_row + path[0], new_col + path[1]
+
+    return paths, max(moves.items(), key=lambda x: x[1])
+
+
 rows = int(input())
 cols = rows
 
@@ -26,5 +48,9 @@ directions = {
     (0, 1): 'right',
 }
 
-
-print(bunny_position())
+path, moves = valid_path(bunny_position())
+for key, value in path.items():
+    if key == moves[0]:
+        print(key)
+        print(*value, sep='\n')
+        print(moves[1])
