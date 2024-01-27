@@ -3,8 +3,6 @@ class ValueCannotBeNegative(Exception):
     pass
 
 
-
-
 for _ in range(5):
     number = int(input())
 
