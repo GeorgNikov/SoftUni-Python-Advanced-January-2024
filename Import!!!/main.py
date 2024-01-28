@@ -13,6 +13,9 @@ mat = [[1, 2], [3, 4]]
 res = [[mat[j][i] for j in range(len(mat))] for i in range(len(mat[0]))]
 print(res)
 
+# From input '(0, 2)' get coordinates like [1, 2]
+[r, c] = map(lambda x: int(x), input()[1:][:-1].split(', '))
+
 # How can you check if all rows in a matrix mat have the same length
 res =all(len(row) == len(mat[0]) for row in mat)
 res1 = len(set(len(row) for row in mat)) == 1
