@@ -4,7 +4,8 @@ while True:
     command, *info = input().split("-")
 
     if command == 'Create':
-        with open(f"resources/{info[0]}", "w"): pass
+        with open(f"resources/{info[0]}", "w"):
+            pass
 
     elif command == 'Add':
         with open(f"resources/{info[0]}", "a") as file:

@@ -3,7 +3,7 @@ import re
 
 words_path = os.path.join("resources", "words.txt")
 text_path = os.path.join("resources", "input.txt")
-output_file_path = os.path.join("resources", "text.txt")
+output_file_path = os.path.join("resources", "text1.txt")
 
 with open(words_path) as file:
     searched_words_as_text = file.read()
