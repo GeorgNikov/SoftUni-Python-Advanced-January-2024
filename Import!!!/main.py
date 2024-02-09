@@ -20,7 +20,7 @@ print(res)
 res =all(len(row) == len(mat[0]) for row in mat)
 res1 = len(set(len(row) for row in mat)) == 1
 
-#Consider the recursive function below:
+# Consider the recursive function below:
 def factorial(n):
     if n <= 1:
         return 1
@@ -28,9 +28,23 @@ def factorial(n):
         return n * factorial(n-1)
 factorial(5)    # 120
 
-#For the recursive function to determine the nth Fibonacci number: DO NOT USE
+# For the recursive function to determine the nth Fibonacci number: DO NOT USE
 def fibonacci(n):
     if n <= 1:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
 fibonacci(6)    #return 8 or  13
+
+
+# Moving into matrix like snake
+def move(row, col, direction, size):
+    return (row + DIRECTIONS[direction][0] + size) % size, (col + DIRECTIONS[direction][1] + size) % size
+
+DIRECTIONS = {
+    'up': [-1, 0],
+    'down': [1, 0],
+    'left': [0, -1],
+    'right': [0, 1],
+}
+
+# ------
