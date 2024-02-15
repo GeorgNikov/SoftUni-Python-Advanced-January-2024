@@ -4,8 +4,8 @@ def move(row, col, direction, size):
         return r, c
     return 'Outside', 'Outside'
 
-rows, cols = [int(x) for x in input().split(',')]
 
+rows, cols = [int(x) for x in input().split(',')]
 cupboards = []
 mouse_position = [0, 0]
 cheese = 0
