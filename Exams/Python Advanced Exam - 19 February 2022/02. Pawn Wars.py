@@ -39,7 +39,6 @@ for row in range(SIZE):
     if 'w' in board[row]:
         player_position['White'] = ([row, board[row].index("w")])
 
-
 while True:
     # When pawns is not close each other to fight -> 1 column distance
     if abs(player_position['White'][1] - player_position['Black'][1]) > 1:
